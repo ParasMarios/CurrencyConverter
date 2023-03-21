@@ -3,8 +3,7 @@ package com.mparaske;
 import okhttp3.*;
 import com.google.gson.*;
 
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class CurrencyConverter {
 
@@ -46,5 +45,11 @@ public class CurrencyConverter {
         double fromRate = conversionRates.get(fromCurrency);
         double toRate = conversionRates.get(toCurrency);
         return amount / fromRate * toRate;
+    }
+
+    public List<String> getAvailableCurrencies() {
+        List<String> availableCurrencies = new ArrayList<>(List.copyOf(conversionRates.keySet()));
+        Collections.sort(availableCurrencies);
+        return availableCurrencies;
     }
 }

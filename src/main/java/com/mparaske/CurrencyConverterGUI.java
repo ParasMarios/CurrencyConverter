@@ -2,6 +2,7 @@ package com.mparaske;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public class CurrencyConverterGUI extends JFrame {
 
@@ -21,9 +22,9 @@ public class CurrencyConverterGUI extends JFrame {
 
         // Create labels and text fields
         JLabel fromCurrencyLabel = new JLabel("From Currency:");
-        JTextField fromCurrencyField = new JTextField(5);
+        JComboBox<String> fromCurrencyBox = new JComboBox<>(currencyConverter.getAvailableCurrencies().toArray(new String[0]));
         JLabel toCurrencyLabel = new JLabel("To Currency:");
-        JTextField toCurrencyField = new JTextField(5);
+        JComboBox<String> toCurrencyBox = new JComboBox<>(currencyConverter.getAvailableCurrencies().toArray(new String[0]));
         JLabel amountLabel = new JLabel("Amount:");
         JTextField amountField = new JTextField(10);
         JLabel resultLabel = new JLabel("Result:");
@@ -34,8 +35,8 @@ public class CurrencyConverterGUI extends JFrame {
         JButton convertButton = new JButton("Convert");
         convertButton.addActionListener(e -> {
             try {
-                String fromCurrency = fromCurrencyField.getText().trim().toUpperCase();
-                String toCurrency = toCurrencyField.getText().trim().toUpperCase();
+                String fromCurrency = Objects.requireNonNull(fromCurrencyBox.getSelectedItem()).toString().trim().toUpperCase();
+                String toCurrency = Objects.requireNonNull(toCurrencyBox.getSelectedItem()).toString().trim().toUpperCase();
                 double amount = Double.parseDouble(amountField.getText().trim());
                 double result = currencyConverter.convertCurrency(fromCurrency, toCurrency, amount);
                 resultField.setText(String.format("%.2f", result));
@@ -52,12 +53,12 @@ public class CurrencyConverterGUI extends JFrame {
         c.gridy = 0;
         add(fromCurrencyLabel, c);
         c.gridx = 1;
-        add(fromCurrencyField, c);
+        add(fromCurrencyBox, c);
         c.gridx = 0;
         c.gridy = 1;
         add(toCurrencyLabel, c);
         c.gridx = 1;
-        add(toCurrencyField, c);
+        add(toCurrencyBox, c);
         c.gridx = 0;
         c.gridy = 2;
         add(amountLabel, c);
