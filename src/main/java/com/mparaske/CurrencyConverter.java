@@ -12,7 +12,6 @@ public class CurrencyConverter {
     private static final String API_KEY = "614a4a96ef1b428db76f923a81924516";
     private static final Gson GSON = new Gson();
     private static final OkHttpClient CLIENT = new OkHttpClient();
-    private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private Map<String, Double> conversionRates;
 
     public CurrencyConverter() {
