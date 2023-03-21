@@ -1,10 +1,14 @@
 package com.mparaske;
 
 
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        CurrencyConverter currencyConverter = new CurrencyConverter();
-        double convertedAmount = currencyConverter.convertCurrency("USD", "EUR", 100);
-        System.out.println(convertedAmount);
+
+        CurrencyConverterGUI currencyConverterGUI = new CurrencyConverterGUI();
+        currencyConverterGUI.setVisible(true);
+        currencyConverterGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        currencyConverterGUI.setSize(400, 200);
     }
 }
