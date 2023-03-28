@@ -1,0 +1,189 @@
+USD,USD - United States Dollar
+EUR,EUR - Euro
+GBP,GBP - British Pound
+JPY,JPY - Japanese Yen
+AUD,AUD - Australian Dollar
+CAD,CAD - Canadian Dollar
+CHF,CHF - Swiss Franc
+CNY,CNY - Chinese Yuan
+HKD,HKD - Hong Kong Dollar
+NZD,NZD - New Zealand Dollar
+SEK,SEK - Swedish Krona
+SGD,SGD - Singapore Dollar
+NOK,NOK - Norwegian Krone
+MXN,MXN - Mexican Peso
+ZAR,ZAR - South African Rand
+INR,INR - Indian Rupee
+RUB,RUB - Russian Ruble
+TRY,TRY - Turkish Lira
+BRL,BRL - Brazilian Real
+CZK,CZK - Czech Koruna
+DKK,DKK - Danish Krone
+HUF,HUF - Hungarian Forint
+ILS,ILS - Israeli New Shekel
+KRW,KRW - South Korean Won
+MYR,MYR - Malaysian Ringgit
+PHP,PHP - Philippine Peso
+PLN,PLN - Polish Zloty
+THB,THB - Thai Baht
+TWD,TWD - New Taiwan Dollar
+IDR,IDR - Indonesian Rupiah
+ARS,ARS - Argentine Peso
+CLP,CLP - Chilean Peso
+COP,COP - Colombian Peso
+PEN,PEN - Peruvian Nuevo Sol
+UYU,UYU - Uruguayan Peso
+AED,AED - United Arab Emirates Dirham
+BOB,BOB - Bolivian Boliviano
+BGN,BGN - Bulgarian Lev
+CRC,CRC - Costa Rican Colon
+HRK,HRK - Croatian Kuna
+CUP,CUP - Cuban Peso
+EGP,EGP - Egyptian Pound
+ISK,ISK - Icelandic Krona
+KES,KES - Kenyan Shilling
+KWD,KWD - Kuwaiti Dinar
+LKR,LKR - Sri Lankan Rupee
+MAD,MAD - Moroccan Dirham
+MUR,MUR - Mauritian Rupee
+NGN,NGN - Nigerian Naira
+OMR,OMR - Omani Rial
+PKR,PKR - Pakistani Rupee
+PAB,PAB - Panamanian Balboa
+QAR,QAR - Qatari Rial
+RON,RON - Romanian Leu
+SAR,SAR - Saudi Riyal
+TND,TND - Tunisian Dinar
+AFN,AFN - Afghan Afghani
+ALL,ALL - Albanian Lek
+AMD,AMD - Armenian Dram
+ANG,ANG - Netherlands Antillean Guilder
+AOA,AOA - Angolan Kwanza
+AZN,AZN - Azerbaijani Manat
+AWG,AWG - Aruban Florin
+BAM,BAM - Bosnia-Herzegovina Convertible Mark
+BBD,BBD - Barbadian Dollar
+BDT,BDT - Bangladeshi Taka
+BHD,BHD - Bahraini Dinar
+BIF,BIF - Burundian Franc
+BMD,BMD - Bermudan Dollar
+BND,BND - Brunei Dollar
+BSD,BSD - Bahamian Dollar
+BWP,BWP - Botswanan Pula
+BYN,BYN - Belarusian Ruble
+BTC,BTC - Bitcoin
+BTN,BTN - Bhutanese Ngultrum
+BZD,BZD - Belize Dollar
+CDF,CDF - Congolese Franc
+CLF,CLF - Chilean Unit of Account (UF)
+CNH,CNH - Chinese Yuan (Offshore)
+CUC,CUC - Cuban Convertible Peso
+CVE,CVE - Cape Verdean Escudo
+DJF,DJF - Djiboutian Franc
+DOP,DOP - Dominican Peso
+DZD,DZD - Algerian Dinar
+ERN,ERN - Eritrean Nakfa
+ETB,ETB - Ethiopian Birr
+FJD,FJD - Fijian Dollar
+FKP,FKP - Falkland Islands Pound
+GEL,GEL - Georgian Lari
+GGP,GGP - Guernsey Pound
+GHS,GHS - Ghanaian Cedi
+GIP,GIP - Gibraltar Pound
+GMD,GMD - Gambian Dalasi
+GNF,GNF - Guinean Franc
+GTQ,GTQ - Guatemalan Quetzal
+GYD,GYD - Guyanaese Dollar
+HNL,HNL - Honduran Lempira
+HTG,HTG - Haitian Gourde
+IMP,IMP - Manx pound
+IQD,IQD - Iraqi Dinar
+IRR,IRR - Iranian Rial
+JEP,JEP - Jersey Pound
+JMD,JMD - Jamaican Dollar
+JOD,JOD - Jordanian Dinar
+KGS,KGS - Kyrgystani Som
+KHR,KHR - Cambodian Riel
+KMF,KMF - Comorian Franc
+KPW,KPW - North Korean Won
+KRW,KRW - South Korean Won
+KWD,KWD - Kuwaiti Dinar
+KYD,KYD - Cayman Islands Dollar
+KZT,KZT - Kazakhstani Tenge
+LAK,LAK - Laotian Kip
+LBP,LBP - Lebanese Pound
+LKR,LKR - Sri Lankan Rupee
+LRD,LRD - Liberian Dollar
+LSL,LSL - Lesotho Loti
+LYD,LYD - Libyan Dinar
+MAD,MAD - Moroccan Dirham
+MDL,MDL - Moldovan Leu
+MGA,MGA - Malagasy Ariary
+MKD,MKD - Macedonian Denar
+MMK,MMK - Myanma Kyat
+MNT,MNT - Mongolian Tugrik
+MOP,MOP - Macanese Pataca
+MRO,MRO - Mauritanian Ouguiya
+MUR,MUR - Mauritian Rupee
+MVR,MVR - Maldivian Rufiyaa
+MWK,MWK - Malawian Kwacha
+MXN,MXN - Mexican Peso
+MYR,MYR - Malaysian Ringgit
+MZN,MZN - Mozambican Metical
+NAD,NAD - Namibian Dollar
+NGN,NGN - Nigerian Naira
+NIO,NIO - Nicaraguan Córdoba
+NOK,NOK - Norwegian Krone
+NPR,NPR - Nepalese Rupee
+NZD,NZD - New Zealand Dollar
+OMR,OMR - Omani Rial
+PAB,PAB - Panamanian Balboa
+PEN,PEN - Peruvian Nuevo Sol
+PGK,PGK - Papua New Guinean Kina
+PHP,PHP - Philippine Peso
+PLN,PLN - Polish Zloty
+PYG,PYG - Paraguayan Guarani
+QAR,QAR - Qatari Rial
+RSD,RSD - Serbian Dinar
+MRU,MRU - Mauritanian Ouguiya
+RWF,RWF - Rwandan Franc
+SBD,SBD - Solomon Islands Dollar
+SCR,SCR - Seychellois Rupee
+SDG,SDG - Sudanese Pound
+SGD,SGD - Singapore Dollar
+SHP,SHP - Saint Helena Pound
+SLL,SLL - Sierra Leonean Leone
+SOS,SOS - Somali Shilling
+SRD,SRD - Surinamese Dollar
+SSP,SSP - South Sudanese Pound
+STD,STD - São Tomé and Príncipe Dobra
+STN,STN - São Tomé and Príncipe Dobra
+SVC,SVC - Salvadoran Colón
+SYP,SYP - Syrian Pound
+SZL,SZL - Swazi Lilangeni
+TJS,TJS - Tajikistani Somoni
+TMT,TMT - Turkmenistani Manat
+TOP,TOP - Tongan Paʻanga
+TTD,TTD - Trinidad and Tobago Dollar
+TZS,TZS - Tanzanian Shilling
+UAH,UAH - Ukrainian Hryvnia
+UGX,UGX - Ugandan Shilling
+UZS,UZS - Uzbekistan Som
+VEF,VEF - Venezuelan Bolívar Fuerte
+VND,VND - Vietnamese Dongs
+VUV,VUV - Vanuatu Vatu
+VES,VES - Venezuelan Bolívar Soberano
+WST,WST - Samoan Tala
+XAF,XAF - Central African CFA Franc
+XCD,XCD - East Caribbean Dollar
+XAG,XAG - Silver Ounce
+XAU,XAU - Gold Ounce
+XCD,XCD - East Caribbean Dollar
+XDR,XDR - Special Drawing Rights
+XOF,XOF - West African CFA Franc
+XPF,XPF - CFP Franc
+XPT,XPT - Platinum Ounce
+XPD,XPD - Palladium Ounce
+YER,YER - Yemeni Rial
+ZMW,ZMW - Zambian Kwacha
+ZWL,ZWL - Zimbabwean Dollar

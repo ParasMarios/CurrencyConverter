@@ -3,7 +3,12 @@ package com.mparaske;
 import okhttp3.*;
 import com.google.gson.*;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CurrencyConverter {
 
@@ -12,9 +17,11 @@ public class CurrencyConverter {
     private static final Gson GSON = new Gson();
     private static final OkHttpClient CLIENT = new OkHttpClient();
     private Map<String, Double> conversionRates;
+    private Map<String, String> currencyDisplayNames;
 
     public CurrencyConverter() {
         fetchConversionRates();
+        loadCurrencyDisplayNames();
     }
 
     private void fetchConversionRates() {
@@ -47,9 +54,33 @@ public class CurrencyConverter {
         return amount / fromRate * toRate;
     }
 
-    public List<String> getAvailableCurrencies() {
-        List<String> availableCurrencies = new ArrayList<>(List.copyOf(conversionRates.keySet()));
-        Collections.sort(availableCurrencies);
-        return availableCurrencies;
+    public List<CurrencyItem> getAvailableCurrencies() {
+        return conversionRates.keySet().stream()
+                .map(code -> new CurrencyItem(code, getCurrencyDisplayName(code)))
+                .sorted(Comparator.comparing(CurrencyItem::getCurrencyName))
+                .collect(Collectors.toList());
+    }
+
+    private void loadCurrencyDisplayNames() {
+        currencyDisplayNames = new HashMap<>();
+
+        try (InputStream inputStream = getClass().getResourceAsStream("/currency_display_names.txt");
+             InputStreamReader streamReader = new InputStreamReader(Objects.requireNonNull(inputStream), StandardCharsets.UTF_8);
+             BufferedReader reader = new BufferedReader(streamReader)) {
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 2) {
+                    currencyDisplayNames.put(parts[0], parts[1]);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String getCurrencyDisplayName(String code) {
+        return currencyDisplayNames.getOrDefault(code, code);
     }
 }

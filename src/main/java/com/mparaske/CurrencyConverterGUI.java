@@ -22,9 +22,9 @@ public class CurrencyConverterGUI extends JFrame {
 
         // Create labels and text fields
         JLabel fromCurrencyLabel = new JLabel("From Currency:");
-        JComboBox<String> fromCurrencyBox = new JComboBox<>(currencyConverter.getAvailableCurrencies().toArray(new String[0]));
+        JComboBox<CurrencyItem> fromCurrencyBox = new JComboBox<>(currencyConverter.getAvailableCurrencies().toArray(new CurrencyItem[0]));
         JLabel toCurrencyLabel = new JLabel("To Currency:");
-        JComboBox<String> toCurrencyBox = new JComboBox<>(currencyConverter.getAvailableCurrencies().toArray(new String[0]));
+        JComboBox<CurrencyItem> toCurrencyBox = new JComboBox<>(currencyConverter.getAvailableCurrencies().toArray(new CurrencyItem[0]));
         JLabel amountLabel = new JLabel("Amount:");
         JTextField amountField = new JTextField(10);
         JLabel resultLabel = new JLabel("Result:");
@@ -35,8 +35,8 @@ public class CurrencyConverterGUI extends JFrame {
         JButton convertButton = new JButton("Convert");
         convertButton.addActionListener(e -> {
             try {
-                String fromCurrency = Objects.requireNonNull(fromCurrencyBox.getSelectedItem()).toString().trim().toUpperCase();
-                String toCurrency = Objects.requireNonNull(toCurrencyBox.getSelectedItem()).toString().trim().toUpperCase();
+                String fromCurrency = ((CurrencyItem) Objects.requireNonNull(fromCurrencyBox.getSelectedItem())).getCurrencyCode();
+                String toCurrency = ((CurrencyItem) Objects.requireNonNull(toCurrencyBox.getSelectedItem())).getCurrencyCode();
                 double amount = Double.parseDouble(amountField.getText().trim());
                 double result = currencyConverter.convertCurrency(fromCurrency, toCurrency, amount);
                 resultField.setText(String.format("%.2f", result));
