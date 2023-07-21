@@ -1,11 +1,17 @@
 package com.mparaske;
 
-import okhttp3.*;
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -13,7 +19,7 @@ import java.util.stream.Collectors;
 public class CurrencyConverter {
 
     private static final String API_URL = "https://openexchangerates.org/api/latest.json";
-    private static final String API_KEY = "614a4a96ef1b428db76f923a81924516";
+    private static final String API_KEY = System.getenv("API_KEY");
     private static final Gson GSON = new Gson();
     private static final OkHttpClient CLIENT = new OkHttpClient();
     private Map<String, Double> conversionRates;
@@ -39,7 +45,10 @@ public class CurrencyConverter {
                 String json = response.body().string();
                 JsonObject jsonObject = GSON.fromJson(json, JsonObject.class);
                 JsonObject ratesObject = jsonObject.getAsJsonObject("rates");
-                conversionRates = GSON.fromJson(ratesObject.toString(), Map.class);
+                Type mapType = new TypeToken<Map<String, Double>>() {
+                }.getType();
+                conversionRates = GSON.fromJson(ratesObject.toString(), mapType);
+
             } else {
                 throw new RuntimeException("Failed to retrieve conversion rates");
             }
